@@ -1,4 +1,3 @@
-
 function submit_contact_form() {
    
     // Get form values
@@ -60,11 +59,12 @@ function submit_contact_form() {
     }
 
     // Calculate date differences
-    var notificationDateDiff = Math.ceil((irs_notification_day - new Date()) / (1000 * 60 * 60 * 24));
+    var notificationDateDiff = Math.ceil((new Date() - irs_notification_day) / (1000 * 60 * 60 * 24));
     var responseDateDiff = Math.ceil((irs_response_day - new Date()) / (1000 * 60 * 60 * 24));
 
     // Validate date differences
-    if (notificationDateDiff > 14) {
+
+    if ( !(notificationDateDiff > 2 && notificationDateDiff < 17)) {
 		$("#response_div").html('');
 
         $("#response_div").html("IRS/State Notification Date must be within 2 weeks.");
@@ -127,8 +127,8 @@ function submit_contact_form_callback(data)
 
 function js_submit(fd,callback)
 {
-	// var submitUrl = 'https://kkawafuchi.wpcomstaging.com/wp-content/plugins/custom_contact_form/process/';
-	var submitUrl = 'https://software-project.local/wp-content/plugins/custom_contact_form/process/';
+	var submitUrl = 'https://kawafuchilaw.com/wp-content/plugins/KawafuchiLawContactForm/process/';
+	// var submitUrl = 'https://software-project.local/wp-content/plugins/KawafuchiLawContactForm/process/';
 
 	$.ajax({url: submitUrl,type:'post',data:fd,contentType:false,processData:false,success:function(response){ callback(response); },});
 
