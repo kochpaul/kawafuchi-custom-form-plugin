@@ -127,8 +127,8 @@ function ideapro_contact_form()
 
 
     // Can't help 
-    $content .= '<h3 id="no_help_region" style="display: none;">Thank you for your inquiry. <br> Unfortunately, your request has been declined as there are no assets or activity in both Hawaii and Asia. Thank you for your understanding.</h3>';
-    $content .= '<h3 id="no_help_green_card" style="display: none;">Thank you for your inquiry. <br> Unfortunately, it seems we may not be able to assist you at this time, as it appears you do not hold a green card, U.S. citizenship, or have investments in the U.S. Thank you for considering our services.</h3>';
+    $content .= '<h3 id="no_help_region" class="no_help_region" style="display: none;">Thank you for your inquiry. <br> Unfortunately, your request has been declined as there are no assets or activity in both Hawaii and Asia. Thank you for your understanding.</h3>';
+    $content .= '<h3 id="no_help_green_card" class="no_help_green_card" style="display: none;">Thank you for your inquiry. <br> Unfortunately, it seems we may not be able to assist you at this time, as it appears you do not hold a green card, U.S. citizenship, or have investments in the U.S. Thank you for considering our services.</h3>';
 
     $content .= '</div>';
 
@@ -256,6 +256,14 @@ function ideapro_contact_form()
             }
         #faq_link a:hover{
             color: #b8b074;
+        }
+
+        .no_help_green_card {
+            color: white;
+        }
+
+        .no_help_region {
+            color: white;
         }
 
     }';

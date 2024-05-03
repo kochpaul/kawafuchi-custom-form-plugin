@@ -21,7 +21,7 @@
 		$information_question = $_POST['information_question']; 
                 
         // email / phone address
-        $to = 'XXX@gmail.com, XXX@tmomail.net';
+        $to = 'kkawafuchi@aol.com, 8086888986@tmomail.net';
 
         $subject = 'New Request from '.$first_name.' '.$last_name;
         $message = '';
